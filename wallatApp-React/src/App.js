@@ -12,6 +12,7 @@ import store from './Redux/Store';
 import UpdateWallet from './components/dashboard/dashboardoperations/UpdateWallet';
 import Transaction from './components/transactions/Transaction';
 import AddTransaction from './components/transactions/transactionoperations/AddTransaction';
+import EditTransaction from './components/transactions/transactionoperations/EditTransaction';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/updatewallet/:id" exact component={UpdateWallet} />
           <Route path="/transactions/:id" exact component={Transaction} />
           <Route path="/trns/add/:id" exact component={AddTransaction} />
+          <Route exact path="/transaction/edit/:id/:walletId" component={EditTransaction} />
           <Route path="/" component={NotFound} />
         </Switch>
       </BrowserRouter>
